@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085824A264A56556E9523778 /* Pods_LyricLabTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A92CD11BDB9CC4701227CC /* Pods_LyricLabTests.framework */; };
+		B51108D61F82B2980024BA44 /* SongListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51108D51F82B2980024BA44 /* SongListTableViewController.swift */; };
+		B5529FF41F8356F800C22C80 /* RhymeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5529FF31F8356F800C22C80 /* RhymeTableViewController.swift */; };
+		B5529FF61F83597C00C22C80 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5529FF51F83597C00C22C80 /* Word.swift */; };
+		B5529FF81F84377200C22C80 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5529FF71F84377200C22C80 /* SettingsTableViewController.swift */; };
 		B5EA87C31F819CB500BDCE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87C21F819CB500BDCE42 /* AppDelegate.swift */; };
-		B5EA87C51F819CB500BDCE42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87C41F819CB500BDCE42 /* ViewController.swift */; };
+		B5EA87C51F819CB500BDCE42 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87C41F819CB500BDCE42 /* EditorViewController.swift */; };
 		B5EA87C81F819CB500BDCE42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EA87C61F819CB500BDCE42 /* Main.storyboard */; };
 		B5EA87CA1F819CB500BDCE42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5EA87C91F819CB500BDCE42 /* Assets.xcassets */; };
 		B5EA87CD1F819CB500BDCE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EA87CB1F819CB500BDCE42 /* LaunchScreen.storyboard */; };
 		B5EA87D81F819CB500BDCE42 /* LyricLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87D71F819CB500BDCE42 /* LyricLabTests.swift */; };
 		B5EA87E31F819CB500BDCE42 /* LyricLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87E21F819CB500BDCE42 /* LyricLabUITests.swift */; };
+		B5EA883C1F81A42B00BDCE42 /* LineNumberLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87F21F819D8A00BDCE42 /* LineNumberLayoutManager.m */; };
+		B5EA883D1F81A42B00BDCE42 /* LineNumberTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87F41F819D8A00BDCE42 /* LineNumberTextView.m */; };
+		B5EA883E1F81A42B00BDCE42 /* LineNumberTextViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA87F61F819D8A00BDCE42 /* LineNumberTextViewWrapper.m */; };
+		B5EA88401F81A4B200BDCE42 /* Sample.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B5EA883F1F81A4A700BDCE42 /* Sample.rtf */; };
+		B5EA88421F81C3FB00BDCE42 /* TextEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EA88411F81C3FB00BDCE42 /* TextEditorViewController.swift */; };
+		DFEE8E3159057D7ABEF30F41 /* Pods_LyricLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6285E7E3399C997D364F3 /* Pods_LyricLab.framework */; };
+		E96AF100799881F92A304FE8 /* Pods_LyricLabUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5740DA364E363BFFB1846F0F /* Pods_LyricLabUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27B51340A7088EF23465C5B2 /* Pods-LyricLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab.release.xcconfig"; sourceTree = "<group>"; };
+		5740DA364E363BFFB1846F0F /* Pods_LyricLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE506A9888E8854DE3A0F74 /* Pods-LyricLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E79CDA79DAB8CB2E7EE4AFC /* Pods-LyricLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2BDD88D3099266E81715C5A /* Pods-LyricLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B51108D51F82B2980024BA44 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
+		B5529FF31F8356F800C22C80 /* RhymeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeTableViewController.swift; sourceTree = "<group>"; };
+		B5529FF51F83597C00C22C80 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		B5529FF71F84377200C22C80 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		B5EA87BF1F819CB500BDCE42 /* LyricLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LyricLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EA87C21F819CB500BDCE42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5EA87C41F819CB500BDCE42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5EA87C41F819CB500BDCE42 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		B5EA87C71F819CB500BDCE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5EA87C91F819CB500BDCE42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5EA87CC1F819CB500BDCE42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +68,18 @@
 		B5EA87DE1F819CB500BDCE42 /* LyricLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyricLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EA87E21F819CB500BDCE42 /* LyricLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricLabUITests.swift; sourceTree = "<group>"; };
 		B5EA87E41F819CB500BDCE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EA87F11F819D8A00BDCE42 /* LineNumberLayoutManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineNumberLayoutManager.h; sourceTree = "<group>"; };
+		B5EA87F21F819D8A00BDCE42 /* LineNumberLayoutManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineNumberLayoutManager.m; sourceTree = "<group>"; };
+		B5EA87F31F819D8A00BDCE42 /* LineNumberTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineNumberTextView.h; sourceTree = "<group>"; };
+		B5EA87F41F819D8A00BDCE42 /* LineNumberTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineNumberTextView.m; sourceTree = "<group>"; };
+		B5EA87F51F819D8A00BDCE42 /* LineNumberTextViewWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineNumberTextViewWrapper.h; sourceTree = "<group>"; };
+		B5EA87F61F819D8A00BDCE42 /* LineNumberTextViewWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineNumberTextViewWrapper.m; sourceTree = "<group>"; };
+		B5EA883F1F81A4A700BDCE42 /* Sample.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Sample.rtf; sourceTree = "<group>"; };
+		B5EA88411F81C3FB00BDCE42 /* TextEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorViewController.swift; sourceTree = "<group>"; };
+		C1A92CD11BDB9CC4701227CC /* Pods_LyricLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C678260E0F175860B2C30207 /* Pods-LyricLabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EAB6285E7E3399C997D364F3 /* Pods_LyricLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F72CA07D7D6C939785CA44C8 /* Pods-LyricLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFEE8E3159057D7ABEF30F41 /* Pods_LyricLab.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085824A264A56556E9523778 /* Pods_LyricLabTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +103,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96AF100799881F92A304FE8 /* Pods_LyricLabUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90D21133B8C1373F56F19DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6285E7E3399C997D364F3 /* Pods_LyricLab.framework */,
+				C1A92CD11BDB9CC4701227CC /* Pods_LyricLabTests.framework */,
+				5740DA364E363BFFB1846F0F /* Pods_LyricLabUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		988153D7E0A837D522932F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F72CA07D7D6C939785CA44C8 /* Pods-LyricLab.debug.xcconfig */,
+				27B51340A7088EF23465C5B2 /* Pods-LyricLab.release.xcconfig */,
+				A2BDD88D3099266E81715C5A /* Pods-LyricLabTests.debug.xcconfig */,
+				6AE506A9888E8854DE3A0F74 /* Pods-LyricLabTests.release.xcconfig */,
+				7E79CDA79DAB8CB2E7EE4AFC /* Pods-LyricLabUITests.debug.xcconfig */,
+				C678260E0F175860B2C30207 /* Pods-LyricLabUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B5EA87B61F819CB500BDCE42 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +140,8 @@
 				B5EA87D61F819CB500BDCE42 /* LyricLabTests */,
 				B5EA87E11F819CB500BDCE42 /* LyricLabUITests */,
 				B5EA87C01F819CB500BDCE42 /* Products */,
+				988153D7E0A837D522932F3C /* Pods */,
+				90D21133B8C1373F56F19DCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +159,18 @@
 			isa = PBXGroup;
 			children = (
 				B5EA87C21F819CB500BDCE42 /* AppDelegate.swift */,
-				B5EA87C41F819CB500BDCE42 /* ViewController.swift */,
+				B5EA87C41F819CB500BDCE42 /* EditorViewController.swift */,
 				B5EA87C61F819CB500BDCE42 /* Main.storyboard */,
+				B5529FF71F84377200C22C80 /* SettingsTableViewController.swift */,
+				B5529FF51F83597C00C22C80 /* Word.swift */,
+				B5529FF31F8356F800C22C80 /* RhymeTableViewController.swift */,
+				B51108D51F82B2980024BA44 /* SongListTableViewController.swift */,
+				B5EA88411F81C3FB00BDCE42 /* TextEditorViewController.swift */,
 				B5EA87C91F819CB500BDCE42 /* Assets.xcassets */,
+				B5EA883F1F81A4A700BDCE42 /* Sample.rtf */,
 				B5EA87CB1F819CB500BDCE42 /* LaunchScreen.storyboard */,
 				B5EA87CE1F819CB500BDCE42 /* Info.plist */,
+				B5EA87F01F819D8A00BDCE42 /* LineNumberTextView */,
 			);
 			path = LyricLab;
 			sourceTree = "<group>";
@@ -125,6 +193,19 @@
 			path = LyricLabUITests;
 			sourceTree = "<group>";
 		};
+		B5EA87F01F819D8A00BDCE42 /* LineNumberTextView */ = {
+			isa = PBXGroup;
+			children = (
+				B5EA87F11F819D8A00BDCE42 /* LineNumberLayoutManager.h */,
+				B5EA87F21F819D8A00BDCE42 /* LineNumberLayoutManager.m */,
+				B5EA87F31F819D8A00BDCE42 /* LineNumberTextView.h */,
+				B5EA87F41F819D8A00BDCE42 /* LineNumberTextView.m */,
+				B5EA87F51F819D8A00BDCE42 /* LineNumberTextViewWrapper.h */,
+				B5EA87F61F819D8A00BDCE42 /* LineNumberTextViewWrapper.m */,
+			);
+			path = LineNumberTextView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5EA87E71F819CB500BDCE42 /* Build configuration list for PBXNativeTarget "LyricLab" */;
 			buildPhases = (
+				2291629D8913F3FD101ED0B8 /* [CP] Check Pods Manifest.lock */,
 				B5EA87BB1F819CB500BDCE42 /* Sources */,
 				B5EA87BC1F819CB500BDCE42 /* Frameworks */,
 				B5EA87BD1F819CB500BDCE42 /* Resources */,
+				7E9187BBBB22CAC721DF1833 /* [CP] Embed Pods Frameworks */,
+				AB4811838F609F7B354229E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5EA87EA1F819CB500BDCE42 /* Build configuration list for PBXNativeTarget "LyricLabTests" */;
 			buildPhases = (
+				98D1AC23F2473C078279BDA3 /* [CP] Check Pods Manifest.lock */,
 				B5EA87CF1F819CB500BDCE42 /* Sources */,
 				B5EA87D01F819CB500BDCE42 /* Frameworks */,
 				B5EA87D11F819CB500BDCE42 /* Resources */,
+				0EEBEF214144521866BD94E5 /* [CP] Embed Pods Frameworks */,
+				E2EC35F89E0ED361E9B7FCA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5EA87ED1F819CB500BDCE42 /* Build configuration list for PBXNativeTarget "LyricLabUITests" */;
 			buildPhases = (
+				058E7C4B5F76B927EED869F1 /* [CP] Check Pods Manifest.lock */,
 				B5EA87DA1F819CB500BDCE42 /* Sources */,
 				B5EA87DB1F819CB500BDCE42 /* Frameworks */,
 				B5EA87DC1F819CB500BDCE42 /* Resources */,
+				BFD11B41D1CD562DAAB1247C /* [CP] Embed Pods Frameworks */,
+				96A6599F3488188A23539862 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +325,7 @@
 				B5EA87CD1F819CB500BDCE42 /* LaunchScreen.storyboard in Resources */,
 				B5EA87CA1F819CB500BDCE42 /* Assets.xcassets in Resources */,
 				B5EA87C81F819CB500BDCE42 /* Main.storyboard in Resources */,
+				B5EA88401F81A4B200BDCE42 /* Sample.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +345,158 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		058E7C4B5F76B927EED869F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0EEBEF214144521866BD94E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2291629D8913F3FD101ED0B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9187BBBB22CAC721DF1833 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96A6599F3488188A23539862 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98D1AC23F2473C078279BDA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB4811838F609F7B354229E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD11B41D1CD562DAAB1247C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2EC35F89E0ED361E9B7FCA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B5EA87BB1F819CB500BDCE42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5EA87C51F819CB500BDCE42 /* ViewController.swift in Sources */,
+				B5EA883C1F81A42B00BDCE42 /* LineNumberLayoutManager.m in Sources */,
+				B5EA883D1F81A42B00BDCE42 /* LineNumberTextView.m in Sources */,
+				B5529FF61F83597C00C22C80 /* Word.swift in Sources */,
+				B5EA88421F81C3FB00BDCE42 /* TextEditorViewController.swift in Sources */,
+				B5EA883E1F81A42B00BDCE42 /* LineNumberTextViewWrapper.m in Sources */,
+				B5EA87C51F819CB500BDCE42 /* EditorViewController.swift in Sources */,
+				B5529FF81F84377200C22C80 /* SettingsTableViewController.swift in Sources */,
+				B5529FF41F8356F800C22C80 /* RhymeTableViewController.swift in Sources */,
+				B51108D61F82B2980024BA44 /* SongListTableViewController.swift in Sources */,
 				B5EA87C31F819CB500BDCE42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +605,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Punya/Documents/Learning Swift/LyricLab/LyricLab/LineNumberTextView/LineNumberTextViewWrapper.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -417,6 +655,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Punya/Documents/Learning Swift/LyricLab/LyricLab/LineNumberTextView/LineNumberTextViewWrapper.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -424,11 +663,14 @@
 		};
 		B5EA87E81F819CB500BDCE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72CA07D7D6C939785CA44C8 /* Pods-LyricLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZV9JB2U7V;
 				INFOPLIST_FILE = LyricLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = punya.LyricLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +681,14 @@
 		};
 		B5EA87E91F819CB500BDCE42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B51340A7088EF23465C5B2 /* Pods-LyricLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UZV9JB2U7V;
 				INFOPLIST_FILE = LyricLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = punya.LyricLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +699,7 @@
 		};
 		B5EA87EB1F819CB500BDCE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2BDD88D3099266E81715C5A /* Pods-LyricLabTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +717,7 @@
 		};
 		B5EA87EC1F819CB500BDCE42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE506A9888E8854DE3A0F74 /* Pods-LyricLabTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +735,7 @@
 		};
 		B5EA87EE1F819CB500BDCE42 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E79CDA79DAB8CB2E7EE4AFC /* Pods-LyricLabUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +752,7 @@
 		};
 		B5EA87EF1F819CB500BDCE42 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C678260E0F175860B2C30207 /* Pods-LyricLabUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
