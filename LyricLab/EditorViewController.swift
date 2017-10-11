@@ -16,7 +16,6 @@ extension String {
 
 class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecognizerDelegate {
 
-    //@IBOutlet weak var wrapper: LineNumberTextViewWrapper!
     let fm = FileManager.default
     let kDatamuseRhymeUrl = "https://api.datamuse.com/words?rel_rhy="
     var fileOpenUrl: String?
@@ -41,15 +40,13 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
         let songsDirectory = docsDirectory.appendingPathComponent("songs", isDirectory: true)
         let alertTitle = navigationItem.rightBarButtonItem?.title
         let alert = UIAlertController(title: alertTitle, message: "", preferredStyle: .alert)
-        //2. Add the text field. You can configure it however you need.
         let oldTitle = self.navigationItem.title
         alert.addTextField { (textField) in
             textField.placeholder = oldTitle
         }
         
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Set", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
             var newDirectory = songsDirectory.appendingPathComponent(textField!.text!)
             var newTitle = textField!.text!
             print("NT: \(newTitle.characters.count)")
@@ -85,11 +82,8 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
             
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
-            //self.dismiss(animated: true, completion: {})
             self.navigationController?.popViewController(animated: true)
-            //alert?.dismiss(animated: true, completion: { })
         }))
-        // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -98,15 +92,12 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
         let songsDirectory = docsDirectory.appendingPathComponent("songs", isDirectory: true)
         let alertTitle = navigationItem.rightBarButtonItem?.title
         let alert = UIAlertController(title: alertTitle, message: "", preferredStyle: .alert)
-        //2. Add the text field. You can configure it however you need.
         let oldTitle = self.navigationItem.title
         alert.addTextField { (textField) in
             textField.placeholder = oldTitle
         }
-        
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Set", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
             var newDirectory = songsDirectory.appendingPathComponent(textField!.text!)
             var newTitle = textField!.text!
             if self.fm.fileExists(atPath: newDirectory.path) && self.fileOpenUrl != textField!.text! {
@@ -122,8 +113,7 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
                 
                 newTitle += " copy \(copyCount - 1)"
                 print("newTitle: \(newTitle)")
-                //self.alertExistingFile()
-            } //else {
+            }
             
             self.navigationItem.title = newTitle
             self.navigationItem.rightBarButtonItem?.title = "Rename"
@@ -140,11 +130,8 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
             
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert] (_) in
-            //self.dismiss(animated: true, completion: {})
-            //self.navigationController?.popViewController(animated: true)
             alert?.dismiss(animated: true, completion: { })
         }))
-        // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -187,7 +174,9 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        if self.navigationItem.title != nil {
             saveFieldToFile()
+        }
     }
     
     func saveFieldToFile() {
@@ -207,36 +196,29 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
     
     func alertExistingFile() {
         let alert2 = UIAlertController(title: "Title already used", message: "Overwrite the file with the previous title, or pick a new title", preferredStyle: .alert)
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert2.addAction(UIAlertAction(title: "Overwrite", style: .destructive, handler: { [weak alert2] (_) in
             alert2?.dismiss(animated: true, completion: { })
         }))
         alert2.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak alert2] (_) in
-            //alertSetTitle()
             alert2?.dismiss(animated: true, completion: { })
         }))
-        // 4. Present the alert.
         self.present(alert2, animated: true, completion: nil)
     }
     
     func alertAndSaveName() {
         let alert = UIAlertController(title: "Save Song", message: "Give your song a title and save it.", preferredStyle: .alert)
-        
-        //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
             textField.placeholder = "Title"
             textField.text = ""
         }
-        // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [weak alert] (_) in
-            let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
+            let textField = alert?.textFields![0]
             self.navigationItem.title = textField?.text
         }))
         alert.addAction(UIAlertAction(title: "Discard", style: .destructive, handler: { [weak alert] (_) in
             alert?.dismiss(animated: true, completion: { })
             self.dismiss(animated: true, completion: nil)
         }))
-        // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -248,30 +230,26 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
         FileManager.default.contents(atPath: "")
  
         wrapper.textView.delegate = self
-        /*
-        do {
-            //  Display some sample text to start with
-            let fileURL = Bundle.main.url(forResource: "Sample", withExtension: "rtf")
-            let ats  =  try NSAttributedString.init(url: fileURL!, options: [:], documentAttributes: nil)
-            self.wrapper.textView?.attributedText = ats;
-        } catch {} */
         wrapper.textView.keyboardAppearance = .dark
         wrapper.textView.inputAccessoryView = toolbarView
-        wrapper.textView.lineNumberTextColor = UIColor(red:0.93, green:0.73, blue:0.51, alpha:1.0) //.white
-        wrapper.textView.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0) //.black
-        wrapper.textView.lineNumberBackgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0) //.black //UIColor(red:0.00, green:0.29, blue:0.51, alpha:1.0)
+        wrapper.textView.lineNumberTextColor = UIColor(red:0.93, green:0.73, blue:0.51, alpha:1.0)
+        wrapper.textView.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
+        wrapper.textView.lineNumberBackgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
         wrapper.textView.lineNumberBorderColor = .clear
-        wrapper.textView.font = UIFont(name: "HelveticaNeue-Light", size: 17)
+        if UserDefaults.standard.object(forKey: "FontSize") == nil {
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                UserDefaults.standard.set(22.0, forKey: "FontSize")
+            } else {
+                UserDefaults.standard.set(17.0, forKey: "FontSize")
+            }
+        }
+        wrapper.textView.font = UIFont(name: "HelveticaNeue-Light", size: CGFloat(UserDefaults.standard.float(forKey: "FontSize")))
         wrapper.textView.textColor = .white
-        //  Respond to software keyboard appearance and dissappearance as per:
-        //  http://stackoverflow.com/questions/26213681/ios-8-keyboard-hides-my-textview
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardFrameWillChange), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-        //print("3: \(wrapper.textView.text.lines[19])")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textViewDidChangeSelection(_ textView: UITextView) {
@@ -285,21 +263,15 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
         let ns = textView.text as NSString
         let sr = textView.selectedRange
         let lr = ns.lineRange(for: textView.selectedRange)
-        //print("lr low: \(lr.lowerBound) and lr high: \(lr.upperBound)")
         if (lr.lowerBound > 0) {
             let newSr = NSRange.init(location: lr.lowerBound - 1, length: 0)
             let newLr = ns.lineRange(for: newSr)
             let lastLineUT = ns.substring(with: newLr)
             let lastLine = lastLineUT.trimmingCharacters(in: .newlines)
-            //let lastLine = lastLineUT.trimmingCharacters(in: .whitespacesAndNewlines)
-            //print("lr: \(ns.substring(with: lr))")
             print("lastLine: \(lastLine)")
             
             if let lineNum = textView.text.lines.index(of: lastLine) {
                 print("lastLine: \(lastLine)")
-                //print("lineNum: \(lineNum) prevLineNum: \(prevLineNum)")
-                //prevLineNum = lineNum
-                //print("line num: \(lineNum)")
                 if lineNum % 2 == 0 && lastLine.characters.count > 0 && lastLine != prevLastLine {
                     //A-line
                     prevLastLine = lastLine
@@ -357,7 +329,13 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
     }
     
     func getRhymes(for last:String) {
-        let fullUrl = kDatamuseRhymeUrl + last + "&max=7"
+        var fullUrl = kDatamuseRhymeUrl + last
+        if UIDevice.current.userInterfaceIdiom == .pad {
+           fullUrl += "&max=20"
+        } else {
+            fullUrl += "&max=7"
+        }
+        
         keyword = last
         print("url: \(fullUrl)")
         Alamofire.request(fullUrl).responseJSON { response in
@@ -370,19 +348,14 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
                 var count = 0
                 for word in rhymes {
                     let resultWord = word["word"].stringValue
-                    //resultString = "\(resultString)\(resultWord), "
                     let button = UIButton()
                     button.setTitle(resultWord, for: .normal)
                     button.heightAnchor.constraint(equalToConstant: 15)
                     button.widthAnchor.constraint(lessThanOrEqualToConstant: 80)
-                    //button.widthAnchor.constraint(equalToConstant: 71)
                     button.backgroundColor = UIColor(red:0.10, green:0.41, blue:0.61, alpha:1.0)
                     button.layer.cornerRadius = 10
                     button.addTarget(self, action: #selector(self.wordPressed), for: .touchUpInside)
                     self.toolbarStack.addArrangedSubview(button)
-                    
-                    //count += 1
-                    //if count > 5 { break }
                 }
                 self.toolbarText.text = resultString
                 self.moreButton.isHidden = false
