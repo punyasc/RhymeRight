@@ -45,11 +45,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B547A8BC1FB6592F00558B2A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27B51340A7088EF23465C5B2 /* Pods-LyricLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab.release.xcconfig"; sourceTree = "<group>"; };
 		5740DA364E363BFFB1846F0F /* Pods_LyricLabUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLabUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE506A9888E8854DE3A0F74 /* Pods-LyricLabTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E79CDA79DAB8CB2E7EE4AFC /* Pods-LyricLabUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		80D998F3E4F2DDEF5101999D /* libPods-RhymeRightWatch Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RhymeRightWatch Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		839CEAA9530003F40853DF0E /* Pods-RhymeRightWatch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RhymeRightWatch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RhymeRightWatch Extension/Pods-RhymeRightWatch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		A2BDD88D3099266E81715C5A /* Pods-LyricLabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabTests/Pods-LyricLabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B51108D51F82B2980024BA44 /* SongListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewController.swift; sourceTree = "<group>"; };
 		B5529FF31F8356F800C22C80 /* RhymeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RhymeTableViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +93,7 @@
 		B5EA88411F81C3FB00BDCE42 /* TextEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorViewController.swift; sourceTree = "<group>"; };
 		C1A92CD11BDB9CC4701227CC /* Pods_LyricLabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C678260E0F175860B2C30207 /* Pods-LyricLabUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLabUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLabUITests/Pods-LyricLabUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC35AEAF1FC50E47B669AD80 /* Pods-RhymeRightWatch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RhymeRightWatch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-RhymeRightWatch Extension/Pods-RhymeRightWatch Extension.release.xcconfig"; sourceTree = "<group>"; };
 		EAB6285E7E3399C997D364F3 /* Pods_LyricLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LyricLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72CA07D7D6C939785CA44C8 /* Pods-LyricLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LyricLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LyricLab/Pods-LyricLab.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +132,7 @@
 				EAB6285E7E3399C997D364F3 /* Pods_LyricLab.framework */,
 				C1A92CD11BDB9CC4701227CC /* Pods_LyricLabTests.framework */,
 				5740DA364E363BFFB1846F0F /* Pods_LyricLabUITests.framework */,
+				80D998F3E4F2DDEF5101999D /* libPods-RhymeRightWatch Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,6 +146,8 @@
 				6AE506A9888E8854DE3A0F74 /* Pods-LyricLabTests.release.xcconfig */,
 				7E79CDA79DAB8CB2E7EE4AFC /* Pods-LyricLabUITests.debug.xcconfig */,
 				C678260E0F175860B2C30207 /* Pods-LyricLabUITests.release.xcconfig */,
+				839CEAA9530003F40853DF0E /* Pods-RhymeRightWatch Extension.debug.xcconfig */,
+				CC35AEAF1FC50E47B669AD80 /* Pods-RhymeRightWatch Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -219,6 +238,7 @@
 				B5EA87BD1F819CB500BDCE42 /* Resources */,
 				7E9187BBBB22CAC721DF1833 /* [CP] Embed Pods Frameworks */,
 				AB4811838F609F7B354229E2 /* [CP] Copy Pods Resources */,
+				B547A8BC1FB6592F00558B2A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);

@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.5.1)
+  - AlertOnboarding (1.9)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlertOnboarding
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlertOnboarding: 0c97f5c4feac0a4e914bae5d530f66b4dbc6b771
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: dc8316d005c7d67e358dd93229d9fccff4aeb909
+
+COCOAPODS: 1.2.1

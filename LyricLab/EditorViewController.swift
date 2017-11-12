@@ -49,9 +49,7 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
             let textField = alert?.textFields![0]
             var newDirectory = songsDirectory.appendingPathComponent(textField!.text!)
             var newTitle = textField!.text!
-            print("NT: \(newTitle.characters.count)")
             if newTitle.trimmingCharacters(in: .whitespaces).characters.count == 0 {
-                print("seppuku")
                 self.navigationController?.popViewController(animated: true)
             }
             if self.fm.fileExists(atPath: newDirectory.path) && self.fileOpenUrl != textField!.text! {
@@ -236,6 +234,10 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
         wrapper.textView.backgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
         wrapper.textView.lineNumberBackgroundColor = UIColor(red:0.16, green:0.18, blue:0.20, alpha:1.0)
         wrapper.textView.lineNumberBorderColor = .clear
+        
+        
+        
+        
         if UserDefaults.standard.object(forKey: "FontSize") == nil {
             if UIDevice.current.userInterfaceIdiom == .pad {
                 UserDefaults.standard.set(22.0, forKey: "FontSize")
@@ -309,10 +311,8 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
                 toolbarText.text = " "
                 cleanUpButtons()
                 self.moreButton.isHidden = true
-                print("dint work")
             }
         } else {
-            print("LOERBOUND")
             prevLastLine = nil
             toolbarText.text = " "
             cleanUpButtons()
@@ -386,23 +386,11 @@ class EditorViewController: UIViewController, UITextViewDelegate, UIGestureRecog
     }
     
     @objc func keyboardFrameWillChange(notification: NSNotification) {
-        let keyboardEndFrame = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue?)?.cgRectValue
-        let keyboardBeginFrame = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as! NSValue?)?.cgRectValue
-        let animationCurve = (notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber?)?.intValue
-        let animationDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber?)?.doubleValue
-        
-        UIView.animate(withDuration: animationDuration!, delay: 0, options: [UIViewAnimationOptions(rawValue: UInt(animationCurve!))], animations: {
-            if let oldFrame = self.wrapper?.bounds {
-                var newFrame = oldFrame
-                let keyboardFrameBegin = self.view.convert(keyboardBeginFrame!, to: nil)
-                let keyboardFrameEnd = self.view.convert(keyboardEndFrame!, from: nil)
-                if (keyboardFrameEnd.origin.y <  keyboardFrameBegin.origin.y) {
-                    newFrame.size.height -= max(0.0, keyboardFrameEnd.size.height);
-                }
-                self.wrapper.textView?.frame = newFrame;
-            }
-        }, completion: nil)
-        
+        let d = notification.userInfo!
+        var r = (d[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        r = self.wrapper.convert(r, from:nil)
+        self.wrapper.textView.contentInset.bottom = r.size.height
+        self.wrapper.textView.scrollIndicatorInsets.bottom = r.size.height
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
